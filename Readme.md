@@ -36,6 +36,41 @@ Welcome to StudyForum, your go-to platform for creating and participating in stu
             <img src="https://github.com/AAhadNur/StudyForum/blob/main/static/images/SF-room.png">  
         </td>
     </tr>
+    <tr>
+        <td width="50%">      
+            &nbsp; 
+            <br>
+            <p align="center">
+            User Profile
+            </p>
+            <img src="https://github.com/AAhadNur/StudyForum/blob/main/static/images/SF-profile.png">
+        </td> 
+        <td width="50%">
+            <br>
+            <p align="center">
+            Update Profile
+            </p>
+            <img src="https://github.com/AAhadNur/StudyForum/blob/main/static/images/SF-edit-profile.png">  
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">      
+            &nbsp; 
+            <br>
+            <p align="center">
+            Sign Up
+            </p>
+            <img src="https://github.com/AAhadNur/StudyForum/blob/main/static/images/SF-register.png">
+        </td> 
+        <td width="50%">
+            <br>
+            <p align="center">
+            Log in
+            </p>
+            <img src="https://github.com/AAhadNur/StudyForum/blob/main/static/images/SF-login.png">  
+        </td>
+    </tr>
+
 </table>
 
 ## Getting Started

@@ -1,5 +1,7 @@
 <div align="center">
+
 # StudyForum - Online Study Community
+
 </div>
 
 Welcome to StudyForum, your go-to platform for creating and participating in study rooms on various topics. This web application is built using Django and provides a secure and feature-rich environment for users to collaborate, discuss, and learn together.
@@ -17,22 +19,23 @@ Welcome to StudyForum, your go-to platform for creating and participating in stu
 ### App Preview :
 
 <table width="100%"> 
-<tr>
-<td width="50%">      
-&nbsp; 
-<br>
-<p align="center">
-  Feed Home
-</p>
-<img src="https://github.com/AAhadNur/StudyForum/blob/main/static/images/SF-frontpage.png">
-</td> 
-<td width="50%">
-<br>
-<p align="center">
-  Room Preview
-</p>
-<img src="https://github.com/AAhadNur/StudyForum/blob/main/static/images/SF-room.png">  
-</td>
+    <tr>
+        <td width="50%">      
+            &nbsp; 
+            <br>
+            <p align="center">
+            Feed Home
+            </p>
+            <img src="https://github.com/AAhadNur/StudyForum/blob/main/static/images/SF-frontpage.png">
+        </td> 
+        <td width="50%">
+            <br>
+            <p align="center">
+            Room Preview
+            </p>
+            <img src="https://github.com/AAhadNur/StudyForum/blob/main/static/images/SF-room.png">  
+        </td>
+    </tr>
 </table>
 
 ## Getting Started

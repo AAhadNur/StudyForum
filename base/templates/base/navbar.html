@@ -2,9 +2,9 @@
 {% load static %}
 <header class="header header--loggedIn">
     <div class="container">
-        <a href="#" class="header__logo">
+        <a href="{% url 'home' %}" class="header__logo">
             <img src="{% static 'images/logo.svg' %}" />
-            <h1>StudyBuddy</h1>
+            <h1>StudyForum</h1>
         </a>
         <form class="header__search" method="GET" action="{% url 'home' %}">
             <label>
@@ -21,7 +21,7 @@
 
             {% if request.user.is_authenticated %}
             <div class="header__user">
-                <a href="#">
+                <a href="{% url 'user-profile' request.user.id %}">
                     <div class="avatar avatar--medium active">
                         <img src="{{request.user.avatar.url}}" />
                     </div>
@@ -35,11 +35,13 @@
                 </button>
             </div>
             {% else %}
+            <div>
+                <a href="{% url 'login' %}">
+                    <img src="{% static 'images/avatar.svg' %}" />
+                    Login
+                </a>
 
-            <a href="{% url 'login' %}">
-                <img src="{% static 'images/avatar.svg' %}" />
-                <p>Login</p>
-            </a>
+            </div>
             {% endif %}
 
             <div class="dropdown-menu">

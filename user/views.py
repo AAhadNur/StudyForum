@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 
 from user.models import CustomUser
 from user.forms import MyUserCreationForm, UserForm
@@ -59,8 +60,17 @@ def registerPage(request):
 
 
 def userProfile(request, pk):
-    user = CustomUser.objects.get(id=pk)
-    rooms = user.room_set.all()
+    user = CustomUser.objects.get(id=pk) 
+
+    p = Paginator(
+        user.room_set.all(),
+        6
+    )
+
+    page = request.GET.get('page')
+    rooms = p.get_page(page)
+
+
     room_messages = user.message_set.all()
     topics = Topic.objects.all()
     context = {'user': user, 'rooms': rooms,

@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 from base.models import Room, Topic, Message
 from base.forms import RoomForm
@@ -13,14 +14,26 @@ from base.forms import RoomForm
 def home(request):
     q = request.GET.get('q') if request.GET.get('q') != None else ''
 
-    rooms = Room.objects.filter(
+    rooms_ = Room.objects.filter(
         Q(topic__name__icontains=q) |
         Q(name__icontains=q) |
         Q(description__icontains=q)
     )
 
+    p = Paginator(
+        Room.objects.filter(
+        Q(topic__name__icontains=q) |
+        Q(name__icontains=q) |
+        Q(description__icontains=q)
+        ),
+        6
+    )
+
+    page = request.GET.get('page')
+    rooms = p.get_page(page)
+
     topics = Topic.objects.all()[0:5]
-    room_count = rooms.count()
+    room_count = rooms_.count()
     room_messages = Message.objects.filter(
         Q(room__topic__name__icontains=q))[0:3]
 

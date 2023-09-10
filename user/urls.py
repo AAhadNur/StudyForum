@@ -13,4 +13,4 @@ urlpatterns = [
     path('profile/<str:pk>/', userProfile, name="user-profile"),
 
     path('update-user/', updateUser, name="update-user"),
-]
+] 
